@@ -54,7 +54,7 @@ date_1.addEventListener, date_2.addEventListener('change', () => {
 
 // Считаем разницу между датами и записываем ее по клику на кнопку
 btn.addEventListener('click', () => {
-	timeDiff = (Math.abs(new Date(date1).getTime() - new Date(date2).getTime())) / (1000 * 3600 * 24);
+	timeDiff = Math.floor((Math.abs(new Date(date1).getTime() - new Date(date2).getTime())) / (1000 * 3600 * 24));
 
 	if (timeDiff == 1 || timeDiff % 10 == 1) {
 		result.innerHTML = timeDiff + ' день';
